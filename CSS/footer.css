@@ -1,0 +1,178 @@
+    footer {
+        position: relative;
+        width: 100%;
+        background-color:white;
+        color: black;
+        padding: 20px 20px 0 20px;
+    }
+    
+    .footer-div {
+        display: flex;
+    }
+    
+    .footer-div .box {
+        flex-basis: 50%;
+        padding: 10px 20px;
+    }
+    
+    .box h2 {
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    
+    .box .div-content {
+        margin: 20px 0 0 0;
+    }
+    
+    .box .div-content p {
+        text-align: justify;
+    }
+    
+    .left .div-content .social-icons {
+        margin: 20px 0 0 0;
+        text-align: center;
+    }
+    
+    .left .div-content .social-icons a {
+        padding: 0 5px;
+        color: white;
+    }
+    
+    .left .div-content .social-icons a span {
+        height: 40px;
+        width: 40px;
+        background-color:#202020;
+        line-height: 40px;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 10%;
+        transition: .3s;
+    }
+
+    .left .div-content .social-icons a .fb:hover {
+        background-image: url(fb.png);
+        color: white;
+        height: 42px;
+        width: 42px;
+        font-size: 20px;
+        line-height: 42px;
+    }
+    .left .div-content .social-icons a .ins:hover {
+        background-image: url(ins.png);
+        background-size: 42px 42px;
+        color: white;
+        height: 42px;
+        width: 42px;
+        font-size: 20px;
+        line-height: 42px;
+    }
+    .left .div-content .social-icons a .whats:hover {
+        background-color: #25D366;
+        color: white;
+        height: 42px;
+        width: 42px;
+        font-size: 20px;
+        line-height: 42px;
+    }
+    
+    .right .div-content .fa {
+        height: 40px;
+        width: 40px;
+        color: white;
+        background-color: #202020;
+        line-height: 40px;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 50%;
+        transition: .3s;
+    }
+    
+    /* .right .div-content .fa:hover {
+        background-color: #E8521D;
+        color: #202020;
+    } */
+
+    .right .div-content .mark:hover {
+        background-color: white;
+        color: rgb(150, 1, 1);
+        height: 42px;
+        width: 42px;
+        font-size: 20px;
+        line-height: 42px;
+    }
+
+    .right .div-content .phn:hover {
+        background-color: #25D366;
+        color: white;
+        height: 42px;
+        width: 42px;
+        font-size: 20px;
+        line-height: 42px;
+    }
+
+    .right .div-content .gmail:hover {
+        background-color: white;
+        color: red;
+        height: 42px;
+        width: 42px;
+        font-size: 20px;
+        line-height: 42px;
+    }
+    
+    .right .div-content .text {
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 10px;
+        color: black;
+    }
+    
+    .right .div-content .phone {
+        margin: 10px 0px;
+    }
+    
+    .center .div-content .services a {
+        display: block;
+        margin: 0 0 10px 0;
+        color: black;
+        transition: .3s;
+    }
+    
+    .center .div-content .services a:hover {
+        color: #FFA500;
+    }
+    
+    .bottom {
+        text-align: center;
+        height: 60px;
+        background-color:white;
+        line-height: 60px;
+    }
+    
+    .bottom .credit {
+        font-size: 13px;
+        color: black;
+    }
+    
+    .bottom .credit span {
+        color: #FFA500;
+    }
+    
+    @media screen and (max-width:830px) {
+        footer {
+            position: relative;
+            bottom: 0;
+
+        }
+
+        .footer-div{
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 400px){
+        .bottom .credit {
+            font-size: 10px;
+        }
+    }

@@ -1,0 +1,39 @@
+.main{
+    top: 80px;
+}
+
+.about-section{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+}
+
+
+.about-content{
+    width: 80%;
+    padding: 100px 0px;
+    box-sizing: border-box;
+    color: black;
+}
+
+.about-content h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.text{
+    font-size: 15px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+@media (max-width: 500px){
+    .vid{
+        width: 270px;
+    }
+}

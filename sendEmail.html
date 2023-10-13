@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+<title>Sending Mail</title> 
+<script src="https://smtpjs.com/v3/smtp.js"></script> 
+
+</head> 
+
+<body> 
+	<input type="button" value="Send Mail" onclick="sendEmail()" /> 
+
+<script type="text/javascript"> 
+	function sendEmail() { 
+	    Email.send({ 
+		    Host: "smtp.gmail.com", 
+		    Username: "wsmgarments@gmail.com", 
+		    Password: "garments786", 
+		    To: 'haseebnaviwala12@gmail.com', 
+		    From: "wsmgarments@gmail.com", 
+		    Subject: "Confirm Order", 
+		    Body: "Your Order Was Placed: ", 
+	    }) 
+        .then(
+  			message => alert("mail sent successfully")
+      	);
+	} 
+</script> 
+</body> 
+
+</html> 

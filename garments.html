@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSM Garments</title> 
+    <link rel = "icon" href="pics/wsm-01.png" type = "image/x-icon">     
+    <link rel="stylesheet" href="./CSS/all.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/garments.css">
+    <script src="./JS/garments.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBlzPbTlTnWn_1ugSlSyjK6NCM33SOshDc",
+    authDomain: "wsm-garments.firebaseapp.com",
+    projectId: "wsm-garments",
+    storageBucket: "wsm-garments.appspot.com",
+    messagingSenderId: "943130610725",
+    appId: "1:943130610725:web:6d965627820acf0969c3cc",
+    measurementId: "G-9827PF4K74"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-button">
+        <i class="fa fa-bars" style="color: #FFA500;"></i>
+    </label>
+    <a href="home.html"><img src="./pics/wsm.png" alt="WSM" width="130px" height="60px" class="logo"></a>
+
+    <ul>
+        <li>
+            <a href="home.html">Home</a>
+        </li>
+        <li>
+            <a href="about us.html">About Us</a>
+        </li>
+        <li>
+            <a href="garments.html" class="active">Products</a>
+        </li>
+        <li>
+            <a href="contact us.html">Contact Us</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="max-height">
+<section class="portfolio">
+    <div class="content">
+        <div class="list-items">
+            <a class="list active" data-filter="all">All</a>
+            <a class="list" data-filter="mens">Mens</a>
+            <a class="list" data-filter="womens">Womens</a>
+            <a class="list" data-filter="kids">Kids</a>
+        </div>
+        <div class="port-items">
+            <div class="item-box womens">
+                <img src="pics/1 piece kurti (xl) (01).jpg" alt="">
+                <h1>Women's Kurti</h1>
+                <p>Lawn single piece kurti</p>
+                <p>Price: Rs.600/=</p>
+                <button onclick="getOrder('Single Piece Kurti (01)',600)">Buy Now</button>
+            </div>
+            <div class="item-box mens">
+                <img src="pics/Fila T-Shirt 01.jpg" alt="">
+                <h1>Fila</h1>
+                <p>Round-neck T-shirt</p>
+                <p>Price: Rs.600/=</p>
+                <button onclick="getOrder('Fila (01)',600)">Buy Now</button>
+            </div>
+            <div class="item-box womens">
+                <img src="pics/1 piece kurti (xl) (05).jpg" alt="">
+                <h1>Women's Kurti</h1>
+                <p>Lawn single piece kurti</p>
+                <p>Price: Rs.600/=</p>
+                <button onclick="getOrder('Single Piece Kurti (05)',600)">Buy Now</button>
+            </div>
+            <div class="item-box womens">
+                <img src="pics/Ladies Trouser 04.jpg" alt="">
+                <h1>Ladies Trousers</h1>
+                <p>Original PC Cotton Ladies Tiptop Trousers</p>
+                <p>Price: Rs.800/=</p>
+                <button onclick="getOrder('Ladies Trouser (04)',800)">Buy Now</button>
+            </div>
+            <div class="item-box kids">
+                <img src="pics/Shalwar Kameez 01.jpg" alt="">
+                <h1>Kid's Shalwar Kameez</h1>
+                <p>Lawn shalwar kameez</p>
+                <p>Price: Rs.1000/=</p>
+                <button onclick="getOrder('Shalwar Kameez (01)',1000)">Buy Now</button>
+            </div>
+            <div class="item-box womens">
+                <img src="pics/Ladies Trouser 08.jpg" alt="">
+                <h1>Ladies Trousers</h1>
+                <p>Original PC CottonLadies Tiptop Trousers</p>
+                <p>Price: Rs.800/=</p>
+                <button onclick="getOrder('Ladies Trouser (08)',800)">Buy Now</button>
+            </div>
+            <div class="item-box womens">
+                <img src="pics/1 piece kurti (xl) (03).jpg" alt="">
+                <h1>Women's Kurti</h1>
+                <p>Lawn Single piece kurti</p>
+                <p>Price: Rs.600/=</p>
+                <button onclick="getOrder('Single Piece Kurti (03)',600)">Buy Now</button>
+            </div>
+            <div class="item-box womens">
+                <img src="pics/Ladies Trouser 14.jpg" alt="">
+                <h1>Ladies Trousers</h1>
+                <p>Original PC CottonLadies Tiptop Trousers</p>
+                <p>Price: Rs.800/=</p>
+                <button onclick="getOrder('Ladies Trouser (14)',800)">Buy Now</button>
+            </div>
+            <div class="item-box kids">
+                <img src="pics/Shalwar Kameez 04.jpg" alt="">
+                <h1>Kid's Shalwar Kameez</h1>
+                <p>Lawn shalwar kameez</p>
+                <p>Price: Rs.1000/=</p>
+                <button onclick="getOrder('Shalwar Kameez (02)',1000)">Buy Now</button>
+            </div>
+            <div class="item-box mens">
+                <img src="pics/Fila T-Shirt 02.jpg" alt="">
+                <h1>Fila</h1>
+                <p>Round-neck T-shirt</p>
+                <p>Price: Rs.600/=</p>
+                <button onclick="getOrder('Fila (02)',600)">Buy Now</button>
+            </div>
+            <div class="item-box mens">
+                <img src="pics/Fila T-Shirt 05.jpg" alt="">
+                <h1>Fila</h1>
+                <p>Round-neck T-shirt</p>
+                <p>Price: Rs.600/=</p>
+                <button onclick="getOrder('Fila (05)',600)">Buy Now</button>
+            </div>
+            <div class="item-box womens">
+                <img src="pics/1 piece kurti (xl) (07).jpg" alt="">
+                <h1>Women's Kurti</h1>
+                <p>Lawn Single piece kurti</p>
+                <p>Price: Rs.600/=</p>
+                <button onclick="getOrder('Single Piece Kurti (07)',600)">Buy Now</button>
+            </div>
+            <div class="item-box womens">
+                <img src="pics/Ladies Trouser 05.jpg" alt="">
+                <h1>Ladies Trousers</h1>
+                <p>Original PC CottonLadies Tiptop Trousers</p>
+                <p>Price: Rs.800/=</p>
+                <button onclick="getOrder('Ladies Trouser (05)',800)">Buy Now</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<footer>
+    <div class="footer-div">
+        <div class="left box">
+            <h2>About Us</h2>
+            <div style="border-bottom: 2px solid #FFA500; width: 15%; margin-top: 5px;"></div>
+            <div class="div-content">
+                <p>Techub is a Software Company founded based in Pakistan. We provide multiple services like Web Designing, Website Development, Graphic Designing, Website Maintenance etc</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/WSMGarments"><span class="fa fa-facebook fb"></span></a>
+                    <a href="https://www.instagram.com/wsm_garments/"><span class="fa fa-instagram ins"></span></a>
+                    <a href="https://wa.me/+923200271305"><span class="fa fa-whatsapp whats"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="center box">
+            <h2>Our Products</h2>
+            <div style="border-bottom: 2px solid #FFA500; width: 15%; margin-top: 5px;"></div>
+            <div class="div-content">
+                <div class="services">
+                    <a href="garments.html">Mens</a>
+                    <a href="garments.html">Womens</a>
+                    <a href="garments.html">Kids</a>
+                </div>
+            </div>
+  
+        </div>
+        <div class="right box">
+            <h2>Connect With Us</h2>
+            <div style="border-bottom: 2px solid #FFA500; width: 15%; margin-top: 5px;"></div>
+            <div class="div-content">
+                <div class="location">
+                    <span class="fa fa-map-marker mark"></span>
+                    <span class="text">Karachi, Pakistan</span>
+                </div>
+                <div class="phone">
+                    <span class="fa fa-phone phn"></span>
+                    <span class="text">+923200271305</span>
+                </div>
+                <div class="email">
+                    <span class="fa fa-envelope gmail"></span>
+                    <span class="text">WSMGarments@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <span class="credit">Copyrights &copy 2021 | All Rights Reserved | <span>WSM Garments</span></span>
+    </div>
+  </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.list').click(function(){
+                    const value = $(this).attr('data-filter');
+                    if(value == 'all'){
+                        $('.item-box').show('1000');
+                    }
+                    else{
+                        $('.item-box').not('.'+value).hide('1000');
+                        $('.item-box').filter('.'+value).show('1000');
+                    }
+                })
+            })
+
+            $('.list').click(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+            })
+        </script>
+
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+        nav {
+            position: fixed;
+            background-color:white;
+            width: 100%;
+            height: 80px;
+            z-index: 3;
+            /* display: none; */
+        }
+        
+        .logo {
+            box-sizing: content-box;
+            padding: 0 30px;
+            padding-top: 8px;
+        }
+        
+        nav ul {
+            float: right;
+            margin-right: 20px;
+        }
+        
+        nav ul li {
+            display: inline;
+            line-height: 80px;
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            color: black;
+            font-size: 16px;
+            padding: 7px 11px;
+            text-transform: uppercase;
+            border-width: 0px;
+        }
+        
+        nav ul li a.active {
+            color: #FFA500;
+            transition: .3s;
+            border-bottom: #FFA500 solid 2px;
+        }
+        
+        nav ul li a:hover {
+            color: #FFA500;
+            transition: .3s;
+        }
+        
+        .menu-button {
+            font-size: 30px;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        
+        #click {
+            display: none;
+        }
+
+
+          @media (max-width:900px) {
+            .logo {
+                padding-left: 50px;
+            }
+            nav ul li a {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width:830px) {
+            .menu-button {
+                display: block;
+            }
+            ul {
+                position: fixed;
+                width: 100%;
+                display: block;
+                height: 100%;
+                background: white;
+                text-align: center;
+                top: 80px;
+                left: -100%;
+                transition: all .5s;
+            }
+            nav ul li {
+                display: block;
+                margin: 30px 0;
+                line-height: 40px;
+            }
+            nav ul li a {
+                font-size: 18px;
+            }
+            a:hover,
+            a.active {
+                border: none;
+            }
+            #click:checked~ul {
+                left: 0;
+            }
+        }

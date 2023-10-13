@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSM Garments</title> 
+    <link rel = "icon" href="pics/WSM-01.png" type = "image/x-icon">    
+    <link rel="stylesheet" href="./CSS/all.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/contact.css">
+    <link rel="stylesheet" href="./CSS/error-box.css">
+    <script src="./JS/contact.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://smtpjs.com/v3/smtp.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBlzPbTlTnWn_1ugSlSyjK6NCM33SOshDc",
+    authDomain: "wsm-garments.firebaseapp.com",
+    projectId: "wsm-garments",
+    storageBucket: "wsm-garments.appspot.com",
+    messagingSenderId: "943130610725",
+    appId: "1:943130610725:web:6d965627820acf0969c3cc",
+    measurementId: "G-9827PF4K74"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+</head>
+<body>
+
+
+
+    <div id="confirm">
+        <div class="msg"></div>
+        <button class="yes">OK</button>
+     </div>
+
+
+
+
+
+  <nav>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-button">
+        <i class="fa fa-bars" style="color: #FFA500;"></i>
+    </label>
+    <a href="home.html"><img src="./pics/wsm.png" alt="WSM" width="130px" height="60px" class="logo"></a>
+    <ul>
+        <li>
+            <a href="home.html">Home</a>
+        </li>
+        <li>
+            <a href="about us.html">About Us</a>
+        </li>
+        <li>
+            <a href="garments.html">Products</a>
+        </li>
+        <li>
+            <a href="contact us.html" class="active">Contact Us</a>
+        </li>
+    </ul>
+</nav>
+
+
+
+
+<section class="contact">
+    <div class="content">
+        <h2>Contact Us</h2>
+    </div>
+    <div class="container">
+        <div class="contactinfo">
+            <div class="box">
+                <div class="icon"><i class="fa fa-map"></i></div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <p>Karachi, Pakistan</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa fa-phone"></i></div>
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p>+923200271305</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa fa-envelope"></i></div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <p>wsmgarments@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="contactform">
+                <h2>Send Message</h2>
+                <div class="inputbox">
+                    <input type="text" name="" id='username' required>
+                    <span>Full Name</span>
+                </div>
+                <div class="inputbox">
+                    <input type="text" name="" id='email' required>
+                    <span>Email</span>
+                </div>
+                <div class="inputbox">
+                    <textarea id='message' required></textarea>
+                    <span>Type your message...</span>
+                </div>
+                <div class="inputbox">
+                    <button onclick="send()">Send</button>
+                </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="footer-div">
+        <div class="left box">
+            <h2>About Us</h2>
+            <div style="border-bottom: 2px solid #FFA500; width: 15%; margin-top: 5px;"></div>
+            <div class="div-content">
+                <p>Techub is a Software Company founded based in Pakistan. We provide multiple services like Web Designing, Website Development, Graphic Designing, Website Maintenance etc</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/WSMGarments"><span class="fa fa-facebook fb"></span></a>
+                    <a href="https://www.instagram.com/wsm_garments/"><span class="fa fa-instagram ins"></span></a>
+                    <a href="https://wa.me/+923200271305"><span class="fa fa-whatsapp whats"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="center box">
+            <h2>Our Products</h2>
+            <div style="border-bottom: 2px solid #FFA500; width: 15%; margin-top: 5px;"></div>
+            <div class="div-content">
+                <div class="services">
+                    <a href="garments.html">Mens</a>
+                    <a href="garments.html">Womens</a>
+                    <a href="garments.html">Kids</a>
+                </div>
+            </div>
+  
+        </div>
+        <div class="right box">
+            <h2>Connect With Us</h2>
+            <div style="border-bottom: 2px solid #FFA500; width: 15%; margin-top: 5px;"></div>
+            <div class="div-content">
+                <div class="location">
+                    <span class="fa fa-map-marker mark"></span>
+                    <span class="text">Karachi, Pakistan</span>
+                </div>
+                <div class="phone">
+                    <span class="fa fa-phone phn"></span>
+                    <span class="text">+923200271305</span>
+                </div>
+                <div class="email">
+                    <span class="fa fa-envelope gmail"></span>
+                    <span class="text">WSMGarments@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <span class="credit">Copyrights &copy 2021 | All Rights Reserved | <span>WSM Garments</span></span>
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+</body>
+</html>

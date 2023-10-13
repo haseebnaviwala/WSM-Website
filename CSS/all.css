@@ -1,0 +1,14 @@
+* {
+    scroll-behavior: smooth;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}

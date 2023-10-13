@@ -1,0 +1,90 @@
+.max-height{
+    top: 80px;
+}
+
+.portfolio{
+    color: white;
+    position: relative;
+}
+
+.portfolio .content{
+    padding: 20px;
+    width: 100%;
+    margin:auto; 
+}
+
+.portfolio .content .list-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.portfolio .content .list-items .list{
+    padding: 8px 20px;
+    margin: 5px;
+    cursor: pointer;
+    background:  linear-gradient( 45deg , black ,#FFA500);;
+    color:white;
+}
+
+
+.portfolio .content .list-items .list.active{
+    background:#FFA500;
+}
+
+.port-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.port-items .item-box{
+    width: 300px;
+    height: 480px;
+    position: relative;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+/* .port-items .item-box:hover{
+    box-shadow: 0px 0px 20px black;
+    width: 330px;
+    height: 330px;
+} */
+
+.port-items .item-box img{
+    width: 100%;
+    height: 300px;
+    /* object-fit: cover; */
+}
+
+.port-items .item-box h1{
+    color: black;
+    padding-top: 10px;
+}
+
+.port-items .item-box p{
+    color: black;
+    padding-top: 10px;
+}
+
+.port-items .item-box button{
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.port-items .item-box button:hover{
+    background-color: #FFA500;
+    color: white;
+    transition: .5s;
+}
